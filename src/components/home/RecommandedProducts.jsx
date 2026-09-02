@@ -48,7 +48,7 @@ const handlePrev = () =>
             className="d-none d-md-flex products-arrow products-arrow-prev align-items-center  mx-3"
             aria-label="上一頁"  onClick={handlePrev} 
           >
-            <img src="src/assets/img/Component 11.svg" alt="上一頁" />
+            <img src="/Tick-Tone/img/Component 11.svg" alt="上一頁" />
           </button>
 
           
@@ -68,7 +68,7 @@ const handlePrev = () =>
             className="d-none d-md-flex products-arrow products-arrow-next align-items-center px-3"
             aria-label="下一頁"  onClick={handleNext}  
           >
-            <img src="src/assets/img/Component 12.svg" alt="下一頁" />
+            <img src="/Tick-Tone/img/Component 12.svg" alt="下一頁" />
           </button>
         </div>
       </div>

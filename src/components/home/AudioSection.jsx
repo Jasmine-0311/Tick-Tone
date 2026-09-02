@@ -9,7 +9,7 @@ export default function AudioSection() {
       <div className="row">
       <div className="d-flex flex-column flex-md-row   justify-content-start  gap-md-20 gap-4 align-items-center">
     <div className="col-md-6 mb-md-4 mb-2">
-    <img src="src/assets/img/001.svg" alt="Audio Equipment" className="page-photo" />
+    <img src="/Tick-Tone/img/001.svg" alt="Audio Equipment" className="page-photo" />
     </div>
     <div className="col-md-4 mb-md-4 mb-2 text-center text-md-start">
     <div className="text-box">

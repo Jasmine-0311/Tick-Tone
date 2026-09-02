@@ -14,7 +14,7 @@ function FrontendLayout(){
             <div className="d-flex align-items-center">
               <div className="brand-logo mx-8">
                 <Link className="nav-link active" aria-current="page" to="/">
-                  <img src="src/assets/img/logo 4.svg" alt="TICK & TONE" height="40" />
+                  <img src="/Tick-Tone/img/logo 4.svg" alt="TICK & TONE" height="40" />
                 </Link>
               </div>
 
@@ -44,7 +44,7 @@ function FrontendLayout(){
 
              
               <Link className="nav-link ml-4 cart-icon" to="/cart">
-                <img src="src/assets/img/shopping_bag.svg" alt="購物車" />
+                <img src="/Tick-Tone/img/shopping_bag.svg" alt="購物車" />
               </Link>
 
            
@@ -150,9 +150,9 @@ function FrontendLayout(){
                 
                    <div className="footer-info ">
                     <ul className="footer-list d-flex gap-4">
-                    <li className="mb-2"><Link to="/" className="link"><img src="src/assets/img/Facebook_black.svg" alt="Facebook" /></Link></li>
-                    <li className="mb-2"><Link to="/" className="link"><img src="src/assets/img/Instagram_black.svg" alt="Instagram" /></Link></li>
-                    <li className="mb-2"><Link to="/" className="link"><img src="src/assets/img/Line_black.svg" alt="Line" /></Link></li>
+                    <li className="mb-2"><Link to="/" className="link"><img src="/Tick-Tone/img/Facebook_black.svg" alt="Facebook" /></Link></li>
+                    <li className="mb-2"><Link to="/" className="link"><img src="/Tick-Tone/img/Instagram_black.svg" alt="Instagram" /></Link></li>
+                    <li className="mb-2"><Link to="/" className="link"><img src="/Tick-Tone/img/Line_black.svg" alt="Line" /></Link></li>
                     </ul>
                     </div>
                    

@@ -12,7 +12,7 @@ function AdminLayout(){
             <div className="d-flex">
                 <div className="brand-logo mx-8 ">
             <Link className="nav-link active " aria-current="page" to="/"> 
-            <img src="src/assets/img/logo 4.svg" alt="TICK & TONE" height="40" /></Link>
+            <img src="/Tick-Tone/img/logo 4.svg" alt="TICK & TONE" height="40" /></Link>
             </div>
             
             <ul className="nav ">

@@ -39,7 +39,7 @@ export default function HeroBanner() {
 
     <div className="swiper-slide">
         <div className="hero-bg">
-        <img src="src/assets/img/banner-1.svg" alt="banner-1" className="hero-img" />
+        <img src="/Tick-Tone/img/banner-1.svg" alt="banner-1" className="hero-img" />
       </div>
          
         <div className="container position-relative ">
@@ -55,7 +55,7 @@ export default function HeroBanner() {
         </div>
       </div>
     <div className="swiper-slide"><div className="hero-bg">
-        <img src="src/assets/img/banner-2.svg" alt="banner-2" className="hero-img" />
+        <img src="/Tick-Tone/img/banner-2.svg" alt="banner-2" className="hero-img" />
       </div>
          
         <div className="container position-relative ">
@@ -70,7 +70,7 @@ export default function HeroBanner() {
         </div>
         </div></div>
     <div className="swiper-slide"><div className="hero-bg">
-        <img src="src/assets/img/banner-3.svg" alt="banner-3" className="hero-img" />
+        <img src="/Tick-Tone/img/banner-3.svg" alt="banner-3" className="hero-img" />
       </div>
          
         <div className="container position-relative ">
@@ -89,11 +89,11 @@ export default function HeroBanner() {
  
 
   <div className="swiper-button-prev mx-6">
-        <img src="src/assets/img/Component 11.svg" alt="icon-prev" />
+        <img src="/Tick-Tone/img/Component 11.svg" alt="icon-prev" />
 
   </div>
   <div className="swiper-button-next mx-6">
-        <img src="src/assets/img/Component 12.svg" alt="icon-next" />
+        <img src="/Tick-Tone/img/Component 12.svg" alt="icon-next" />
 
   </div>
 

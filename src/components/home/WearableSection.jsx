@@ -25,7 +25,7 @@ export default function WearableSection() {
     
     </div>
      <div className="col-md-6 mb-md-4 mb-2">
-    <img src="src/assets/img/002.svg" alt="Wearable Equipment" className="page-photo" />
+    <img src="/Tick-Tone/img/002.svg" alt="Wearable Equipment" className="page-photo" />
     </div>
       </div>
         
