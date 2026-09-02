@@ -1,16 +1,91 @@
-# React + Vite
+# 時聲選物 TICK & TONE ⏱️🎧
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> 一個由轉職前端工程師、**獨立完成從切版到串接**的完整電商網站。
 
-Currently, two official plugins are available:
+<a href="https://jasmine-0311.github.io/Tick-Tone/" target="_blank">**🔗 Tick＆Tone**</a>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 為什麼做這個專案
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+大部分電商練習專案止步於「把特定頁面的 API 資料渲染出來」。
+時聲選物不一樣——**購物車與後台管理頁面沒有設計稿**,並且從首頁到結帳頁等所有頁面全部由我一人實作。
 
-## Expanding the ESLint configuration
+這代表:
+1. 我能了解並實作一個完整的專案
+2. 我能把設計思維直接轉換成**可重用、可維護的元件系統**,而不是複製貼上拼湊出來的頁面
+3. 我能在**沒有設計交接**的情況下,自己判斷資訊架構與使用者流程
+   
+這正是我想證明的能力——不只是「會切版」,而是「能獨立扛下一個產品從 0 到 1」。
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ 核心頁面
+
+| 頁面 | 說明 |
+|---|---|
+| 🏠 **首頁** | Banner、精選商品以元件化方式管理,方便未來擴充改版 |
+| 🛍️ **產品列表頁** | 串接商品列表 API,支援依類別點按篩選商品,產品卡片抽成獨立 component 重複利用 |
+| 📄 **產品詳細頁** | 完整商品資訊展示,串接單一商品 API |
+| 🛒 **購物車頁面** | **無設計稿、自主切版開發**,串接購物車 API 處理新增/刪除/數量變更 |
+| 💳 **結帳頁面** | 完成下單流程的最後一哩路 |
+| 🔐 **商品後台頁面** | 含 Modal 元件管理商品新增/編輯,並使用 Token 進行權限驗證 |
+
+---
+
+## 🧩 開發方法
+
+這個專案從**切版階段就採用原子化元件設計(Atomic Component Design)**,不是先寫完整頁面再拆分,而是一開始就以「元件優先」的思維規劃結構:
+
+- **Banner、產品卡片、後台 Modal** 等重複性 UI 全部抽成獨立元件,降低重複程式碼、提升可維護性
+- 使用 **React Router** 統一管理整站路由與分頁邏輯,頁面切換與導覽結構清晰可控
+- 透過**RESTful API** 串接商品列表、購物車、後台權限(Token 驗證)等資料流,將 API 邏輯與畫面邏輯分離
+- 搭配 `useState`、`useEffect`等Hook 管理元件狀態與生命週期,確保資料流向可預期、易除錯
+
+---
+
+## 🧱 技術棧
+
+```
+框架        React + Vite
+UI 輔助     Bootstrap
+路由        React Router
+資料串接    RESTful API(商品列表 / 購物車 / 後台權限驗證)
+```
+---
+
+## 📸 畫面截圖
+<img width="1512" height="741" alt="截圖 2026-09-02 18 51 11" src="https://github.com/user-attachments/assets/29587f52-a95b-4588-8b32-477c4b9ca0b0" />
+<img width="1382" height="741" alt="截圖 2026-09-02 17 20 39" src="https://github.com/user-attachments/assets/5ead5bd9-708d-4c9d-aed0-ab1d68b56a52" />
+<img width="1512" height="817" alt="截圖 2026-09-02 18 53 15" src="https://github.com/user-attachments/assets/4b96d994-0998-4e84-a44b-680092e104c9" />
+<img width="1356" height="741" alt="截圖 2026-09-02 17 20 20" src="https://github.com/user-attachments/assets/087056fd-bece-4adf-871f-d5c3860d6c7b" />
+
+---
+
+## 🔧 技術挑戰與解法
+
+**1. 購物車與後台頁面沒有設計稿,如何決定資訊架構?**
+在沒有 UI 稿的情況下,我先以使用者操作流程反推需要的元件與狀態:購物車需要處理商品數量增減、單項刪除、總金額即時更新;後台則需要新增/編輯商品的表單邏輯。確定資料流向後,才進入切版與樣式階段,避免邊做邊改的結構混亂。
+
+**2. 後台頁面的權限驗證怎麼設計?**
+後台頁面透過 Token 驗證身份,登入後將 Token 存起來並在每次 API 請求中夾帶,確保只有通過驗證的請求能存取或修改商品資料,避免未授權的操作。
+
+**3. 為什麼從切版階段就用原子化元件?**
+如果等頁面刻完再回頭拆元件,常常會發現耦合太深、難以抽離。因此在動手切版之前,我先盤點 Banner、產品卡片、Modal 等會重複出現的 UI 區塊,直接以獨立元件的方式開發,讓後續不同頁面(首頁、列表頁、後台)可以共用同一套元件,減少重複程式碼。
+2. 後台頁面的權限驗證怎麼設計? 後台頁面透過 Token 驗證身份,登入後將 Token 存起來並在每次 API 請求中夾帶,確保只有通過驗證的請求能存取或修改商品資料,避免未授權的操作。
+
+
+**5. API 呼叫過多導致畫面載入變慢,怎麼排查與優化?**
+在開發單品頁(SingleProducts)與後台的過程中,隨著路由與元件數量增加,開發環境的載入速度開始明顯下降。我透過 Chrome DevTools 的 Network 面板進行排查,發現首頁在非必要的時間點載入了不相干的 Chunk。
+針對這個問題,我做了三件事來優化效能:
+- 使用 React.lazy 與 Suspense 進行路由分割,讓單品頁與後台的程式碼各自獨立打包,首頁不需要一開始就載入無關頁面的資源
+- 清除打包瓶頸:將全域重複匯入的 Bootstrap JS 拆解,改為按需引入(On-demand Import),減少不必要的 bundle 體積
+  **優化後,載入速度明顯提升,整體操作體驗變得順暢許多。**
+---
+
+## 🗺️ 後續規劃
+
+- [ ] 導入更完整的狀態管理方案(視專案規模評估 Context / Redux)
+- [ ] 補齊表單驗證與錯誤處理的邊界情境
+- [ ] 細節化產品詳細頁面
+
