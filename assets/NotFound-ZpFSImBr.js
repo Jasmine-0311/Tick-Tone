@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-D-oznMWL.js";var t=e();function n(){return(0,t.jsx)(`h2`,{children:`頁面未找到`})}export{n as default};

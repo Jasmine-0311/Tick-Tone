@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-D-oznMWL.js";var t=e();function n(){return(0,t.jsx)(`div`,{children:(0,t.jsx)(`h1`,{children:`訂單管理`})})}export{n as default};
