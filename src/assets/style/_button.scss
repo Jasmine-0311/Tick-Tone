@@ -1,0 +1,65 @@
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: map-get($spacers, 2);
+  padding: map-get($spacers, 4) map-get($spacers, 5);
+  border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  white-space: nowrap;
+  
+  $font-settings: map-get($type-specs, "button3");
+  font-size: nth($font-settings, 1);
+  font-weight: nth($font-settings, 2);
+  line-height: nth($font-settings, 3);
+
+  &:disabled, &.disabled {
+    background-color: map-get($grays, "300");
+    color: map-get($grays, "500");
+    cursor: not-allowed;
+    pointer-events: none;
+    svg, i { color: map-get($grays, "500"); }
+  }
+}
+
+@each $name, $colors in $btn-configs {
+  .btn-#{$name} {
+    background-color: nth($colors, 1);
+    color: nth($colors, 2);
+
+    @if $name == "icon-circle" {
+      width: 48px;
+      height: 48px;
+      padding: 0;
+      border-radius: 50%;
+    }
+
+    &:hover {
+      background-color: nth($colors, 3);
+      color: nth($colors, 4);
+      
+      @if nth($colors, 3) == $white {
+        border-color: rgba(0, 0, 0, 0.1);
+      } @else {
+        border-color: transparent;
+      }
+    }
+
+    svg, i { color: inherit; }
+  }
+}
+
+.btn-heart {
+  background: transparent;
+  color: $white;
+  font-size: 24px;
+  border: none;
+  transition: color 0.3s;
+  &:hover {
+    color: #ff4d4f;
+  }
+}

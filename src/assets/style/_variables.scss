@@ -1,0 +1,99 @@
+// ==========================================================================
+// 1. 顏色定義 
+// ==========================================================================
+$white: #ffffff;
+$primary-white: #F8F9FB;
+$primary-black: #1C1C1C;
+$primary-black-light: #262729;
+$blue-main: #0F25F0;
+
+// Gray 
+$grays: (
+  "900": #121212,
+  "800": #1c1c1c,
+  "500": #6c757d,
+  "400": #adb5bd,
+  "300": #dee2e6,
+  "200": #e9ecef,
+  "100": #f8f9fa,
+  "50":  #ffffff
+);
+
+$theme-colors: (
+  "primary": $primary-white,    
+  "secondary": $blue-main,  
+  "success": #198754,
+  "danger": #dc3545  
+);
+$body-bg: $primary-black;
+$body-color: $primary-white;
+
+
+// ==========================================================================
+// 2. 文字規格清單 
+// 格式: "名稱": (字體大小, 字體粗細, 行高)
+// ==========================================================================
+$type-specs: (
+  // 標題類
+  "h1": (48px, 600, 1.2),
+  "h2": (36px, 600, 1.2),
+  "h3": (28px, 600, 1.2),
+  "h4": (24px, 600, 1.2),
+  "h5": (20px, 600, 1.2),
+  "h6": (18px, 600, 1.2),
+  // 內文類
+  "body1": (20px, 400, 1.5),
+  "body2": (16px, 600, 1.5),
+  "body3": (16px, 400, 1.5),
+  "body4": (14px, 400, 1.5),
+  // 按鈕類
+  "button1": (20px, 400, 1.5),
+  "button2": (18px, 400, 1.5),
+  "button3": (16px, 400, 1.5)
+);
+
+
+// ==========================================================================
+// 3. 迴圈 
+// ==========================================================================
+@each $name, $value in $type-specs {
+  .#{$name}, #{$name} {
+    font-size: nth($value, 1) !important;
+    font-weight: nth($value, 2) !important;
+    line-height: nth($value, 3) !important;
+    letter-spacing: 0px !important;
+  }
+}
+
+// ==========================================================================
+$spacer: 4px;
+
+$spacers: (
+  0: 0,
+  1: $spacer * 1,   // 4px
+  2: $spacer * 2,   // 8px
+  3: $spacer * 3,   // 12px
+  4: $spacer * 4,   // 16px
+  5: $spacer * 5,   // 20px
+  6: $spacer * 6,   // 24px
+  7: $spacer * 7,   // 28px
+  8: $spacer * 8,   // 32px
+  9: $spacer * 9,   // 36px
+  10: $spacer * 10, // 40px
+  11: $spacer * 11, // 44px
+  12: $spacer * 12, // 48px
+  13: $spacer * 13, // 52px
+  14: $spacer * 14, // 56px
+  15: $spacer * 15, // 60px
+  16: $spacer * 16,  // 64px
+  20: $spacer * 20  // 80px
+
+);
+
+///btn
+$btn-configs: (
+  "primary":   ($white, $primary-black, $blue-main, $white),
+  "secondary": ($primary-black-light, $white, $white, $primary-black),
+  "tertiary":  ($blue-main, $white, $white, $blue-main),
+  "icon-circle": ($blue-main, $white, $white, $blue-main)
+);

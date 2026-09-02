@@ -1,0 +1,22 @@
+
+@import "variables";
+@import "base";
+
+//  Bootstrap
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
+// 元件樣式
+@import "layout";      // 
+@import "components";  // 
+
+
+@import "_products";
+@import "_cart";
+@import "_button";
+@import "_home";
+@import "_singlePage";
+

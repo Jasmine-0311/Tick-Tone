@@ -1,0 +1,69 @@
+
+    .product-list-hero {
+  background-image: url("/src/assets/img/Rectangle_1.svg"); 
+  
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  
+  padding-top: 172px;
+  padding-bottom: 172px;
+  width: 100%;
+
+  .hero-text  {
+   align-items: center;
+   text-align: center;
+  }
+}
+
+.category-card {
+ background-color: white;
+ color: black;
+  .category-item {
+    border-bottom: 1px solid #eee;
+     
+    
+    .category-main {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.03); 
+      }
+    }
+
+    // 子分類清單
+    .sub-list {
+      list-style: none;
+      padding: 0 0 1rem 0; 
+      
+
+      li {
+        
+        font-size: 16px;
+        cursor: pointer;
+        transition: color 0.2s;
+
+        &:hover {
+          opacity: 0.8; 
+        }
+      }
+    }
+  }
+}
+
+.custom-separator {
+  .breadcrumb-item + .breadcrumb-item::before {
+   content: none;
+    font-family: "bootstrap-icons";
+    // content: "\F285"; 
+   
+    color: rgba(255, 255, 255, 0.5); // 調整箭頭顏色
+    vertical-align: middle;
+    font-size: 12px;
+  }
+}

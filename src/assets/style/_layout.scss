@@ -1,0 +1,161 @@
+// _layout.scss
+
+.nav-section{
+background-color: $primary-black-light;
+}
+
+.brand-logo{
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+     @media (max-width: 375px) {
+    height: map-get($spacers, 8); // 32px
+  }
+}
+
+.nav {
+  
+ 
+  padding: 12px 0;
+
+
+
+  .nav-link {
+    color: $white ; 
+    font-size: 16px;
+    padding: 0.5rem 1.5rem ;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+
+    &:hover, &.active {
+      opacity: 1;
+      color: $white ;
+    }
+
+    // Active 狀態底線
+    &.active::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 1.5rem;
+      right: 1.5rem;
+      height: 2px;
+      background-color: $blue-main;
+    }
+  }
+}
+
+// 搜尋框組
+
+
+
+.nav-search-group {
+  .search-input {
+    width: 196px;
+    height: 40px;
+    background-color: rgba($white, 0.05);
+    border: 1px solid map-get($grays, "300");
+    border-radius: 8px;
+    color: $white;
+    font-size: 14px;
+    
+    &::placeholder {
+    color: $white ;
+    opacity: 1; 
+    font-size: 14px;
+  }
+    
+    background-image: url("src/assets/img/search.svg");
+    background-repeat: no-repeat;
+    background-position: right 12px center; 
+    background-size: 16px;
+    
+
+
+    padding: 6px 40px 6px 16px; 
+    
+    transition: all 0.3s ease;
+
+    &:focus {
+      background-color: transparent;
+      border-color: $blue-main;
+      box-shadow: 0 0 0 1px $blue-main;
+      outline: none;
+      
+    }
+
+   
+    @media (max-width: 375px) {
+      width: 160px;
+      padding: 4px 32px 4px 12px; 
+      background-position: right 8px center; 
+    }
+  }
+}
+
+.cart-icon {
+  padding: 8px 8px;
+  display: flex;              
+  align-items: center;
+  justify-content: center;
+  background-color:transparent;
+
+  cursor: pointer;
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+
+
+.login-btn{
+  height: 40px;
+  padding-top: 0;
+  padding-bottom: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: nth(map-get($type-specs, "button3"), 1);
+  font-weight: nth(map-get($type-specs, "button3"), 2);
+  line-height: 1;
+}
+
+.footer-info{
+  font-size: 14px;
+  color: $gray-400;
+  font-weight: 400;
+  margin-bottom: 0 0;
+  margin-left: 4px;
+
+}
+
+.copy_right{
+  font-size: 14px;
+  color: $white;
+  font-weight: 200;
+  align-content: center;
+}
+
+.footer-list{
+  list-style: none;
+  padding-left: 4px;
+
+  .link{
+    color: $gray-400;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+
+    &:hover {
+    
+      color: $white;
+    }
+  }
+
+};
+

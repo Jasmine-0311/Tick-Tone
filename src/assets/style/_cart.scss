@@ -1,0 +1,161 @@
+
+.cart-list {
+  width: 100%;
+}
+
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+
+
+  @media (max-width: 767.98px) {
+    flex-wrap: wrap; 
+    position: relative;
+    padding: 1rem;
+    gap: 15px;
+  }
+
+
+  &__img-box {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+ 
+  &__info {
+    flex-grow: 1;
+    margin-left: 1.5rem;
+
+    .title {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+    
+    .id {
+      font-size: 0.8rem;
+      opacity: 0.5;
+    }
+
+    @media (max-width: 767.98px) {
+      margin-left: 0;
+      width: calc(100% - 100px); // 扣除圖片寬度
+    }
+  }
+
+ 
+  &__qty {
+    display: flex;
+    align-items: center;
+    margin: 0 2rem;
+
+    input {
+      width: 45px;
+      height: 32px;
+      text-align: center;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 4px; // 你要求的 4px 圓角
+      margin: 0 8px;
+      color: inherit;
+      &:focus { outline: none; }
+    }
+
+    button {
+      background: none;
+      border: none;
+      color: inherit;
+      cursor: pointer;
+      padding: 5px 10px;
+      &:disabled { opacity: 0.3; }
+    }
+
+    @media (max-width: 767.98px) {
+      margin: 0;
+      order: 3; // 手機版排在下方
+    }
+  }
+
+  /* 小計金額 */
+  &__price {
+    font-weight: bold;
+    min-width: 100px;
+    text-align: right;
+
+    @media (max-width: 767.98px) {
+      order: 4;
+      flex-grow: 1;
+    }
+  }
+
+  /* 刪除按鈕  */
+  &__del {
+    background: none;
+    border: none;
+    color: inherit;
+    opacity: 0.5;
+    margin-left: 1rem;
+    transition: opacity 0.2s;
+    &:hover { opacity: 1; }
+
+    @media (max-width: 767.98px) {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+  }
+}
+
+.cart-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 
+//   margin-top: 32px;
+//   padding-top: 16px;
+ 
+
+  &__total-box {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+    color: white;
+
+    .label {
+      font-size: 1rem;
+      opacity: 0.6; 
+    }
+
+    .amount {
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    align-items: center; 
+    .amount {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.btn-payment{
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+}
+

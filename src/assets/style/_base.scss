@@ -1,0 +1,13 @@
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden; // 這種寫法很常見，是為了避免手機版橫向捲軸跑出來
+
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
