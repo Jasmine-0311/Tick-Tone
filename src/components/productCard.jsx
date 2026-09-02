@@ -43,7 +43,7 @@ const ProductCard = ({ product, showCart = false, onClick,  }) => {
                 </div>
                 {showCart && (
                     <button 
-                        className="cart-btn  btn-primary btn   "
+                        className="cart-btn  btn-primary btn btn-sm-secondary  "
                         onClick={(e) => {
                             e.stopPropagation(); 
                             handleAddCart();

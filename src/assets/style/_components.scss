@@ -74,11 +74,12 @@
     min-height: 40px;
     height: auto;
     border:none;
-    border-radius: 8px; 
+    border-radius: 4px !important ;
     padding: 8px 16px;
     aspect-ratio: auto;
-    background-color: #262729;
-    color: white;
+    background-color: #262729 !important;
+    color: white !important;
+
 
     span {
       display: inline; 

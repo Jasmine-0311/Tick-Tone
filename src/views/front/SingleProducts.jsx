@@ -54,7 +54,7 @@ function SingleProducts() {
     };
   }, [id]);
 
-  // 1. 規格：讀取 Productcontentconfig.js
+ 
   const specs = useMemo(() => getProductSpecs(product), [product]);
 
  
